@@ -1,0 +1,37 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Track  {
+  id Int @id @default(autoincrement())
+  name String
+  url String
+  playlists TracksOnPlaylists[]
+
+  @@map("tracks")
+}
+
+model Playlist {
+  id Int @id @default(autoincrement())
+  name String @unique
+  tracks TracksOnPlaylists[]
+
+  @@map("playlists")
+}
+
+model TracksOnPlaylists {
+  track Track @relation(fields: [trackId], references: [id])
+  trackId Int
+  playlist Playlist @relation(fields: [playlistId], references: [id])
+  playlistId Int 
+
+  @@id([trackId, playlistId])
+  @@map("tracks_on_playlists")
+}
+
+
