@@ -24,6 +24,7 @@ and integration a Postgres database with [Prisma](https://www.prisma.io/) ORM.**
 
 **Commands "npm i" or "yarn" will install node_modules required to run the program.**
 
+  
 # :heavy_exclamation_mark: Important
 
 **The environment variables need to filled as an additional step in the setup:**
@@ -31,9 +32,11 @@ and integration a Postgres database with [Prisma](https://www.prisma.io/) ORM.**
 - [Spotify API](https://developer.spotify.com/) for also playing playlists from spotify
 - (Optional) URL of your local Postgres database
 
+  
 # :factory: How to Run
 
 **On command terminal run "npm start" or "yarn start". In discord, writting "!connect" will start the bot in your channel and all commands to use it are listed by writting "!help".**
 
+  
 # :e-mail: Sidenote
 **A few functionalities still need refining, as in dealing with large playlists can cause side effects as lagging or in some cases the bot will not be able to process massive playlist.**
